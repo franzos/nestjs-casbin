@@ -1,8 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { Enforcer } from 'casbin';
+import { Enforcer, Effector, Filter, Watcher } from 'casbin';
 import { CASBIN_ENFORCER } from './nest-casbin.constants';
-import { Filter, Watcher } from 'casbin/lib/persist';
-import { Effector } from 'casbin/lib/effect';
 
 @Injectable()
 export class NestCasbinService {
