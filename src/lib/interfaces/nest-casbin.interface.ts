@@ -3,12 +3,14 @@ import { Type } from '@nestjs/common';
 import { Adapter, Model } from 'casbin';
 
 export interface NestCasbinModuleOptions {
-  adapter: Type<Adapter> | any,
-  model: string | Model,
+  adapter: Type<Adapter> | any;
+  model: string | Model;
 }
 
 export interface NestCasbinOptionsFactory {
-  createCasbinOptions(): Promise<NestCasbinModuleOptions> | NestCasbinModuleOptions;
+  createCasbinOptions():
+    | Promise<NestCasbinModuleOptions>
+    | NestCasbinModuleOptions;
 }
 
 export interface NestCasbinModuleAsyncOptions

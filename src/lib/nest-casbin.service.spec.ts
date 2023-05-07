@@ -16,17 +16,17 @@ describe('NestCasbinService', () => {
       const adapter = await MongoAdapter.newAdapter({
         uri: 'mongodb://tests:password@127.0.0.1:27017/?authSource=admin',
         collection: 'casbin',
-        database: 'casbindb',
+        database: 'casbindb'
       });
       const e = await newEnforcer(model, adapter);
       await e.loadPolicy();
       return e;
-    },
+    }
   };
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [casbinEnforcerProvider, NestCasbinService],
-      exports: [NestCasbinService],
+      exports: [NestCasbinService]
     }).compile();
 
     service = module.get<NestCasbinService>(NestCasbinService);
