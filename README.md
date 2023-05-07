@@ -11,6 +11,7 @@ NestJs Casbin Mongodb
 ### Installation
 
 ```bash
+# https://npm.pantherx.org/-/web/detail/nestjs-casbin
 $ pnpm install https://github.com/franzos/nestjs-casbin.git
 ```
 
@@ -81,7 +82,8 @@ export class AppModule {}
 ### Installation
 
 ```bash
-$ pnpm install https://github.com/franzos/nestjs-casbin.git
+# https://npm.pantherx.org/-/web/detail/nestjs-casbin
+$ pnpm install nestjs-casbin
 ```
 
 ### Setup module
