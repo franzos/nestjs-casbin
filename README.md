@@ -11,7 +11,7 @@ NestJs Casbin Mongodb
 ### Installation
 
 ```bash
-$ yarn install nestjs-casbin
+$ pnpm install https://github.com/franzos/nestjs-casbin.git
 ```
 
 ### Setup module
@@ -24,8 +24,8 @@ import { MongoAdapter } from 'casbin-mongodb-adapter';
 
 const adapter = (async () => await MongoAdapter.newAdapter({
         uri: 'mongodb://localhost:27017',
-        collectionName: 'casbin',
-        databaseName: 'casbindb',
+        collection: 'casbin',
+        database: 'casbindb',
 }));
 
 
@@ -54,8 +54,8 @@ export class CasbinConfigService implements NestCasbinOptionsFactory {
     
     const adapter = await MongoAdapter.newAdapter({
        uri: 'mongodb://localhost:27017',
-       collectionName: 'casbin',
-       databaseName: 'casbindb',
+       collection: 'casbin',
+       database: 'casbindb',
     });
 
     return {
@@ -81,7 +81,7 @@ export class AppModule {}
 ### Installation
 
 ```bash
-$ yarn install nestjs-casbin-mongodb
+$ pnpm install https://github.com/franzos/nestjs-casbin.git
 ```
 
 ### Setup module
