@@ -15,10 +15,10 @@
   "keywords": [],
   "scripts": {
     "describe": "npm-scripts-info",
-    "build": "run-s clean && run-p build:*",
+    "build": "pnpm run clean && pnpm run /^build:.*/",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
-    "fix": "run-s fix:*",
+    "fix": "pnpm run /^fix:.*/",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
     "fix:tslint": "tslint --fix --project .",
     "test:lint": "tslint --project . && prettier \"src/**/*.ts\" --list-different",
