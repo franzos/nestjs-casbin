@@ -14,7 +14,7 @@ describe('NestCasbinService', () => {
     useFactory: async () => {
       const model = path.resolve(__dirname, '../../.tests/rbac_model.conf');
       const adapter = await MongoAdapter.newAdapter({
-        uri: 'mongodb://tests:password@127.0.0.1:27017/?authSource=admin',
+        uri: 'mongodb://tests:password@127.0.0.1:27020/?authSource=admin',
         collection: 'casbin',
         database: 'casbindb'
       });

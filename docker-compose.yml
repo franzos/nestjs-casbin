@@ -8,4 +8,4 @@ services:
       MONGO_INITDB_ROOT_USERNAME: tests
       MONGO_INITDB_ROOT_PASSWORD: password
     ports:
-      - 27017:27017
+      - 27020:27017

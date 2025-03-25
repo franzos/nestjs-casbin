@@ -163,6 +163,7 @@ export class NestCasbinService {
     return await this.enforcer.getNamedPolicy(name);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public async addFunction(name: string, fn: any): Promise<void> {
     return await this.enforcer.addFunction(name, fn);
   }
@@ -209,6 +210,7 @@ export class NestCasbinService {
 
   // TODO: edit this in adapter to make it query from database
   // the operation will look like `await this.enforcer.getAdapter().enforce()`
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public async checkPermission(...params: any[]) {
     return this.enforcer.enforce(...params);
   }
