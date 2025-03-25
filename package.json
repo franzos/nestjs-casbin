@@ -1,6 +1,6 @@
 {
   "name": "nestjs-casbin-fork",
-  "version": "11.0.12",
+  "version": "11.0.13",
   "description": "NestJS Casbin module for all adapters",
   "author": {
     "name": "Rex Isaac Raphael",
